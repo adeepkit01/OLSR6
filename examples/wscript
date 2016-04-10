@@ -1,0 +1,10 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    obj = bld.create_ns3_program('simple-point-to-point-olsr6',
+                                 ['point-to-point', 'internet', 'olsr6', 'applications', 'wifi'])
+    obj.source = 'simple-point-to-point-olsr6.cc'
+
+    obj = bld.create_ns3_program('olsr6-hna',
+                                 ['core', 'mobility', 'wifi', 'csma', 'olsr6'])
+    obj.source = 'olsr6-hna.cc'
